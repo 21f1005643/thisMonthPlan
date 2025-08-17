@@ -1,0 +1,16 @@
+services:
+  app:
+
+    build: .
+
+    container_name: thisMonthPlan-Node24
+
+    ports:
+      - "5173:5173"
+    
+    volumes:
+      - .:/app
+    
+    stdin_open: true
+    tty: true
+
