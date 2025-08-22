@@ -1,16 +1,19 @@
 services:
   app:
-
     build: .
 
     container_name: thisMonthPlan-Node24
 
     ports:
-      - "5173:5173"
-    
+      - '5173:5173'
+
     volumes:
       - .:/app
-    
+
+      - node_modules_data:/app/node_modules # named volumes for better performance
+
     stdin_open: true
     tty: true
 
+volumes:
+  node_modules_data:

@@ -1,0 +1,32 @@
+{
+  "name": "Vue Planner Dev Environment",
+
+  // Point to your existing docker-compose file
+  "dockerComposeFile": "../docker-compose.yml",
+
+  // Tell VS Code which service in the docker-compose file to use
+  "service": "app",
+
+  // Set the workspace folder inside the container
+  "workspaceFolder": "/app",
+
+  // Add some useful customizations for VS Code
+  "customizations": {
+    "vscode": {
+      // Add recommended extensions that will be installed automatically inside the container
+      "extensions": [
+        "Vue.volar", // The official Vue language support
+        "dbaeumer.vscode-eslint", // For code linting
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-containers"
+      ],
+      // Use the settings.json you created earlier
+      "settings": {
+        "typescript.tsdk": "/app/node_modules/typescript/lib"
+      }
+    }
+  },
+
+  // Command to run after the container is created
+  "postCreateCommand": "npm install"
+}

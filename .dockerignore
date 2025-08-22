@@ -1,0 +1,45 @@
+# .dockerignore
+
+# Git files 
+.git
+.gitignore
+.gitattributes
+
+# Local Dependencies
+node_modules
+
+# IDE and Editor Configuration
+.vscode
+.idea
+.editorconfig
+.prettierrc.json
+
+# Docker and Development Configuration
+Dockerfile
+docker-compose.yml
+
+# Secrets and Local Environment 
+.env
+
+# Logs 
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output and cache 
+dist
+dist-ssr
+coverage
+*.tsbuildinfo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Cypress test artifacts (from .gitignore)
+/cypress/videos/
+/cypress/screenshots/
